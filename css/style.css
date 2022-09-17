@@ -1,0 +1,121 @@
+body {
+  font-family: "Raleway", sans-serif;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  background-color: #eee;
+}
+
+.container {
+  height: 90%;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #bbb, -5px -5px 10px #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.sign-in,
+.sign-up {
+  position: absolute;
+  height: 100%;
+}
+
+.sign-in {
+  width: 35%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  box-shadow: 5px 5px 10px #bbb;
+  background-color: #eee;
+  z-index: 1;
+  transition: left 0.6s ease-in-out, box-shadow 0.6s ease-out;
+}
+
+.sign-up {
+  width: 65%;
+  top: 0;
+  right: 0;
+  background-color: #eee;
+  transition: right 0.6s ease-in-out;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: opacity 0.6s ease-in-out;
+}
+
+#sign-in-btn,
+#sign-up-btn,
+#sign-up {
+  background-color: #4a6ee2;
+  margin: 40px auto 0;
+  padding: 15px 35px;
+  border-radius: 2rem;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 5px #aaa;
+}
+
+.before {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: -5px -5px 10px #fff inset, 5px 5px 10px #bbb inset;
+  top: -100px;
+  right: -100px;
+  transition: right 0.6s ease-in-out;
+}
+
+.after {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: -5px -5px 10px #fff inset, 5px 5px 10px #bbb inset;
+  bottom: -200px;
+  left: -150px;
+  transition: left 0.6s ease-in-out;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+a.icon {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #808080;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  transition: 0.1s ease-in-out;
+  color: #808080;
+}
+
+a.icon:hover {
+  border: 2px solid #808080;
+  transform: scale(0.9);
+  transition: 0.1s ease-in-out;
+}
+
+.sign-up form input:not(#sign-up) {
+  display: block;
+  width: 300px;
+  padding: 10px 20px;
+  margin: 10px auto;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #bbb inset, 2px 2px 5px #fff;
+}
